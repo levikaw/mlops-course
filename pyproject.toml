@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlops-course"
+dependencies = [
+  "ruff == 0.3.4",
+  "autopep8 == 2.1.0",
+  "pre-commit == 3.7.0"
+]
+requires-python = ">=3.11"
+authors = [
+  {name = "levikaw", email = "levikaw@example.com"},
+]
+description = "Репозиторий для домашних заданий по курсу MLOps и production в DS исследованиях 3.0 от OpenDataScience"
+readme = "README.md"
+license = {file = "LICENSE"}
+dynamic = ["version"]
+classifiers = [
+  "Programming Language :: Python"
+]
+
+[project.urls]
+Repository = "https://github.com/levikaw/mlops-course"
+"Bug Tracker" = "https://github.com/levikaw/mlops-course/issues"
+
+[tool.ruff]
+fix = true
+src = ["src", "test"]
+show-fixes = true
+exclude = [
+    ".git",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "build"
+]
+line-length = 88
+indent-width = 4
+target-version = "py311"
+
+[tool.ruff.lint]
+fixable = ["ALL"]
+
+[tool.ruff.format]
+quote-style = "single"
+docstring-code-format = true
+skip-magic-trailing-comma = true
