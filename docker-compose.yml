@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+
+  app:
+    build: 
+      context: .
+      args:
+        PATH_TO_ENVIRONMENT: ${PATH_TO_ENVIRONMENT}
+        PATH_TO_PYPROJECT: ${PATH_TO_PYPROJECT}
+    volumes:  
+      - "./:/app"
+    stdin_open: true
+    tty: true

@@ -23,3 +23,11 @@ you can run **pre-commit** (**Ruff** also configure into *.pre-commit-config.yam
 ```sh
 pre-commit
 ```
+## Setup environment
+
+1. Install [Docker](https://docs.docker.com/engine/install/)
+2. Rename _.env.dev_ to _.env_
+3. Run script from root dir:
+    ```sh
+    docker-compose up -d
+    ```
