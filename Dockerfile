@@ -14,4 +14,3 @@ RUN conda env update --file environment.yml
 
 # For example
 # ENTRYPOINT [ "python", "train.py"]
-ENTRYPOINT [ "/bin/bash" ]
